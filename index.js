@@ -1,5 +1,5 @@
 import express from "express";
-import createPdf from "./pdf-exporter.mjs";
+import { createPdf } from "./pdf-exporter.mjs";
 
 
 const app = express();
