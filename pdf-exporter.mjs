@@ -593,7 +593,7 @@ async function testSubtaskFetch(mainIssue, issue, doc) {
   await addAttachmentsToPDF(doc, attachments);
 }
 
-async function createPdf(issue) {
+export async function createPdf(issue) {
   const mainIssue = await finalObject(issue);
   const akValue = mainIssue['ΑΚ'] ? String(mainIssue['ΑΚ']) : 'Χωρίς ΑΚ';
   const companyValue = mainIssue['Εταιρεία Ανάθεσης'] ? String(mainIssue['Εταιρεία Ανάθεσης']) : 'Χωρίς Εταιρεία';
@@ -625,5 +625,5 @@ async function createPdf(issue) {
   console.log('✅ PDF uploaded to Google Drive:', driveLink);
 }
 
-createPdf('FTT-7139');
+//createPdf('FTT-7139');
 
